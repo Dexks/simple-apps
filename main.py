@@ -1,7 +1,7 @@
 # A simple program with simple login logic and file manipulation
 # Creates a txt file "userdata" to use as database (stores passwords insecurely)
 # Has two different user privileges
-# Tested on Windows only 
+# Created for Windows use
 
 
 from random import randint
@@ -33,7 +33,7 @@ def signin(user, passwd, role="common-user"):
         system("cls")
         return False
     else:
-        with open("userdata.txt", "a") as datafile:
+        with open("userdata.txt", "a", encoding="utf-8") as datafile:
             datafile.write(f"{user},{passwd},{role}\n")
         return True
 
@@ -43,17 +43,17 @@ def signin(user, passwd, role="common-user"):
 # If it exists, does nothing
 def filestartup():
     try:
-        with open("userdata.txt", "r"):
+        with open("userdata.txt", "r", encoding="utf-8"):
             pass
     except FileNotFoundError:
-        with open("userdata.txt", "w") as datafile:
-            datafile.write(f"admin,admin,super-user\n")
+        with open("userdata.txt", "w", encoding="utf-8") as datafile:
+            datafile.write("admin,admin,super-user\n")
 
 
 # Reads file "data.txt" and adds info to the dict USERS
 def readfile():
     filestartup()
-    with open("userdata.txt", "r") as datafile:
+    with open("userdata.txt", "r", encoding="utf-8") as datafile:
         lines = datafile.readlines()
         for line in lines:
             info = line.split(",")
@@ -65,7 +65,7 @@ def readfile():
 # Translates the USERS dict to the userdata.txt file
 def savefile():
     filestartup()
-    with open("userdata.txt", "w") as datafile:
+    with open("userdata.txt", "w", encoding="utf-8") as datafile:
         for user in USERS:
             datafile.write(f"{user},{USERS[user]['passwd']},{USERS[user]['role']}")
 
