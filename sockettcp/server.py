@@ -44,7 +44,7 @@ def listen():
         # Prints the client tuple (ip, port)
         print("Connection from -> ", client)
 
-        # Prints the received message
+        # Awaits and prints the received message
         print("Data received:", recv(connected))
 
         # Sends "datatosend" data
