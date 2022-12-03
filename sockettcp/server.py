@@ -47,7 +47,7 @@ def listen():
         # Prints the received message
         print("Data received:", recv(connected))
 
-        # Sends "hello" in bytes (encodes transforms 'str' in 'bytes')
+        # Sends "datatosend" data
         send(connected, datatosend)
         print("Data sent:", datatosend)
 
