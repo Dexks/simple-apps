@@ -34,7 +34,7 @@ def connect():
     send(datatosend, client)
     print("Data sent:", datatosend)
 
-    # Receives and prints data
+    # Await and prints data
     data = recv(client)
     print("Data received:", data)
     client.close()
