@@ -37,7 +37,7 @@ def listen():
     datatosend = "Hello, client"
 
     while True:
-        print("...")
+        print("Waiting connection...")
         # Await a connection
         connected, client = server.accept()
 
@@ -45,7 +45,8 @@ def listen():
         print("Connection from -> ", client)
 
         # Awaits and prints the received message
-        print("Data received:", recv(connected))
+        data = recv(connected)
+        print("Data received:", data)
 
         # Sends "datatosend" data
         send(connected, datatosend)
