@@ -27,7 +27,6 @@ def searchcoininfo(coin):
 
 
 def cryptotable():
-    print("-> Press CTRL + C to stop")
     print("|   {:<4}   |   {:<21}   |   {:<7}   |   {:<22}   |   {:<22}   |"
           .format("RANK", "NAME", "SYMBOL", "PRICE", "CHANGE%24H"))
     for item in COINS:  # for each item in COINS, print a line with lots of info
