@@ -1,5 +1,5 @@
-# api-requests
-### A simple program that makes multiple requests in public APIs.
+
+# A simple program that makes multiple requests in public APIs.
 ### Info
 + Request info from two APIs
 + Parses, formats and shows information
