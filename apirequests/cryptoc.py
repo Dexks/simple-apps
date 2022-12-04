@@ -27,10 +27,10 @@ def searchcoininfo(coin):
 
 
 def cryptotable():
-    print("|   {:<4}   |   {:<21}   |   {:<7}   |   {:<12}   |   {:<9}   |"
+    print("|   {:<4}   |   {:<21}   |   {:<7}   |   {:<12}   |   {:<10}   |"
           .format("RANK", "NAME", "SYMBOL", "PRICE", "CHANGE%24H"))
     for item in COINS:  # for each item in COINS, print a line with lots of info
-        print("|   {:<4}   |   {:<21}   |   {:<7}   |   {:<12.3f}   |   {:<9.3f}   |"
+        print("|   {:<4}   |   {:<21}   |   {:<7}   |   {:<12.3f}   |   {:<10.3f}   |"
               .format(COINS[item]['rank'], item, COINS[item]['symbol'], float(COINS[item]['priceUsd']),
                       float(COINS[item]['changePercent24Hr'])))
 
