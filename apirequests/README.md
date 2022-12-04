@@ -1,6 +1,11 @@
 # api-requests
-### A simple program that makes multiple requests in public APIs. Parses, formats and shows information
-#### APIs used:
+### A simple program that makes multiple requests in public APIs.
+### Info
++ Request info from two APIs
++ Parses, formats and shows information
++ Search function
+
+##### APIs used:
 * https://www.fruityvice.com/#3
 * https://docs.coincap.io/
 
