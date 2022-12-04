@@ -3,7 +3,9 @@
 
 log.txt output example:
 
-In Window -> [ Google - Google Chrome ] -> 03/12/2022 15:14:37 
+
+In Window -> [ Google - Google Chrome ] -> 03/12/2022 15:14:37
+
 keylogger [space] python [enter]
 
 # Requires:
